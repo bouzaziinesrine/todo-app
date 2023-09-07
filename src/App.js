@@ -47,8 +47,10 @@ const toggleComplete = async(todo) => {
   })
 }
 //Delete todo
-const deleteTodo = async(todo) =>{
-  await deleteDoc(doc(db,'todo',todo.id))
+const deleteTodo = async(id) =>{
+  
+  await deleteDoc(doc(db,'todos',id))
+  console.log('test')
 };
 
   return (
